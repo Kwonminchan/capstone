@@ -1,14 +1,6 @@
-doctype html 
-html 
-    include includes/head.pug 
-    body 
-        p 
-            h3 home page
-            form(id="login", action="/admit", method="post") 
-                input(type="text", id="id", placeholder="ID", required="true")
-                br
-                input(type="password", id="pw", placeholder="PW", required="true")
-                br
-                input(type="submit", value="LOGIN")
-            form(id="join", action="/join", method="post")
-                button(type="submit") JOIN
+extends layouts/main
+
+block content     
+    p
+        h3 home page
+        

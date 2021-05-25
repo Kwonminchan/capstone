@@ -11,6 +11,11 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+// 로그인 화면
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
 // 로그인 성공
 app.post('/admit', (req, res) => {
     res.render('question');

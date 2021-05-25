@@ -1,0 +1,13 @@
+extends layouts/main
+
+block content 
+    p 
+        form(id="login", action="/admit", method="post") 
+            input(type="text", id="id", placeholder="ID", required="true")
+            br
+            input(type="password", id="pw", placeholder="PW", required="true")
+            br
+            input(type="submit", value="LOGIN")
+        form(id="join", action="/join", method="post")
+            button(type="submit") JOIN
+        include partials/socialLogin

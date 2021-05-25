@@ -1,12 +1,11 @@
-doctype html 
-html 
-    include includes/head.pug 
-    body 
-        h3 join page 
+extends layouts/main 
+
+block content 
+    h3 join page 
         form(id="join", action="/success", method="post") 
-            input(id="id", type="text", placeholder="ID")
+            input(id="id", type="text", placeholder="ID", required=true)
             br
-            input(id="pw", type="password", placeholder="PW")
-            input(id="pw2", type="password", placeholder="pw를 한 번 더 입력하세요")
+            input(id="pw", type="password", placeholder="Password", required=true)
+            input(id="pw2", type="password", placeholder="Verify Password", required=true)
             br
             input(type="submit", value="JOIN")
